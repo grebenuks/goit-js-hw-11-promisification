@@ -27,7 +27,7 @@ const makeTransaction = (transaction) => {
       if (canProcess) {
         res({ id: transaction.id, time: delay });
       } else {
-        rej(transaction.id);
+        rej({ id: transaction.id });
       }
     }, delay);
   });
